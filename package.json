@@ -1,5 +1,6 @@
 {
   "name": "linkedin-clone",
+  "homepage": "https://yashikajotwani12.github.io/Linkedin-cloned",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -44,12 +45,11 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yashikajotwani12/Linkedin-clone.git"
+    "url": "git+https://github.com/yashikajotwani12/Linkedin-cloned.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yashikajotwani12/Linkedin-clone/issues"
-  },
-  "homepage": "https://github.com/yashikajotwani12/Linkedin-clone#readme"
+    "url": "https://github.com/yashikajotwani12/Linkedin-cloned/issues"
+  }
 }
