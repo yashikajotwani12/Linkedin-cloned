@@ -1,9 +1,17 @@
 ## Fav-Book
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks 
+## Table of Contents
+
+- [About the Project](#about-the-project)
+- [Contributors](#contributors)
+- [License](#license)
+
+### About the Project
+
+> The <b>LinkedIn-clone</b> web application presents a custom LinkedIn-clone.
+> <br>
+> The APP is created with the latest industry standards using React.js and Redux Toolkit
+> <br>
+> Firebase is used for the backend <br>
 > <br>
 
 ## App functionality
@@ -59,7 +67,7 @@ Most importantly, enjoy the app!<br>
 
 **Author**
 
-​**Yashika Jotwani**
+**Yashika Jotwani**
 
 - Github: [yashikajotwani12](https://github.com/yashikajotwani12)
 - Linkedin: [Yashika Jotwani](https://www.linkedin.com/in/yashika-jothwani-03a0061b7/)
