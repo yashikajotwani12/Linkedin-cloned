@@ -39,7 +39,7 @@ This project was built using these technologies.
 
 **Step 1**<br>
 Navigate through the local folder where you want to clone the repository and run<br>
-`git clone https://github.com/yashikajotwani12/Linkedin-cloneed`. It will clone the repo to your local folder.<br>
+`git clone https://github.com/yashikajotwani12/Linkedin-cloned`. It will clone the repo to your local folder.<br>
 **Step 2**<br>
 Run `cd 
 fav-book `<br>
