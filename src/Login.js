@@ -12,7 +12,7 @@ function Login()
     const [profilePic, setProfilePic]=useState("");
     const dispatch =useDispatch();
     const LoginToApp=(e)=>{
-        auth.preventDefault();
+        e.preventDefault();
 
 
         auth.signInWithEmailAndPassword(email,password)
@@ -20,8 +20,8 @@ function Login()
             dispatch(login({
                 email:userAuth.user.email,
                 uid:userAuth.user.uid,
-                displayName:name,
-                profileUrl:profilePic,
+                displayName:userAuth.user.displayName,
+                profilePic:userAuth.user.photoUrl,
 
             }))
         }).catch(error=> alert(error));
@@ -34,15 +34,15 @@ function Login()
         .then((userAuth)=>{
             userAuth.user.updateProfile({
                 displayName:name,
-                photoURL:profilePic,
+                photoUrl:profilePic,
             })
             .then(()=>{
               dispatch(
                   login({
                   email:userAuth.user.email,
                   uid:userAuth.user.uid,
-                  displayName :userAuth.user.name,
-                  photoUrl:userAuth.user.profilePic,
+                  displayName : name,
+                  photoUrl: profilePic,
 
               }))
             })
@@ -50,12 +50,13 @@ function Login()
     };
     return(
         <div className="login">
+        <h1> You are not logged in</h1>
         <img src="https://genylabs.io/wp-content/uploads/2019/10/Social-Listening-to-LinkedIn.png"/>
         <form>
             <input value={name} onChange={(e)=> setName(e.target.value)} placeholder="full name (required if registered) " type="text"></input>
-            <input value={profilePic} onChange={(e)=> setProfilePic(e.target.value) }placeholder=" Profile pic Url (optional) " type="text"/>
+            <input value={profilePic} onChange={(e)=> setProfilePic(e.target.value) } placeholder=" Profile pic Url (optional) " type="text"/>
             <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Email " type="email"/>
-            <input value={password}  onChange={(e)=> setPassword(e.target.value)}placeholder =" Password " type="password"/>
+            <input value={password}  onChange={(e)=> setPassword(e.target.value)} placeholder =" Password " type="password"/>
             <button type="submit" onClick={LoginToApp}>Sign In</button>
         </form>
         <p>Not a member?{" "}

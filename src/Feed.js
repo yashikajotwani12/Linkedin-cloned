@@ -11,6 +11,7 @@ import { db } from './firebase';
 import firebase from 'firebase';
 import { useSelector } from 'react-redux';
 import { selectUser } from './features/userSlice';
+
 function Feed()
 {   
     const user=useSelector(selectUser);
@@ -20,8 +21,8 @@ function Feed()
        db.collection("posts").orderBy("timestamp","desc").onSnapshot(snapshot=>(
            setPosts(snapshot.docs.map(doc =>(
                {
-                   id:doc.id,
-                   data: doc.data()
+                   id: doc.id,
+                   data: doc.data(),
                }
            )))
        ))
@@ -29,7 +30,7 @@ function Feed()
     const sendPost=(e)=>{
         e.preventDefault();
        db.collection('posts').add({
-           name:user.displayName,
+           name: user.displayName,
            description:user.email,
            message:input,
            photoUrl:user.photoUrl ||"",
@@ -64,6 +65,7 @@ function Feed()
                 </div>
             </div>
             {/* posts */}
+           
             {posts.map(({id , data : {name, description, message,photoUrl}})=>(
               <Post
                    key={id}
@@ -73,6 +75,7 @@ function Feed()
              photoUrl={photoUrl}
               />
             ))}
+          
             
             
         </div>
